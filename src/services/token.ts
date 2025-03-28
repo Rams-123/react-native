@@ -117,6 +117,5 @@ export {
 	isTokenExpiringSoon,
 	removeTokens,
 	setTokens,
-	updateToken
+	updateToken,
 }
-

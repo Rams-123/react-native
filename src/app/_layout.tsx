@@ -59,7 +59,8 @@ export default function RootLayout() {
 										animation: "ios_from_right",
 									}}
 								>
-									<Stack.Screen name="index"
+									<Stack.Screen
+										name="index"
 										options={{
 											headerShown: false,
 										}}

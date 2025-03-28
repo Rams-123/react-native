@@ -1,0 +1,152 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"formatter": {
+		"indentWidth": 4,
+		"lineWidth": 80
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": false,
+			"nursery": {
+				"useSortedClasses": {
+					"level": "warn",
+					"fix": "safe",
+					"options": {
+						"attributes": ["className"],
+						"functions": ["cn"]
+					}
+				}
+			},
+			"complexity": {
+				"noExtraBooleanCast": "warn",
+				"noUselessConstructor": "warn",
+				"noUselessLoneBlockStatements": "warn",
+				"noExcessiveCognitiveComplexity": "warn",
+				"noUselessRename": "warn",
+				"noUselessTernary": "warn",
+				"noVoid": "warn",
+				"noWith": "warn"
+			},
+			"correctness": {
+				"noConstAssign": "error",
+				"noConstantCondition": "warn",
+				"noEmptyCharacterClassInRegex": "warn",
+				"noEmptyPattern": "warn",
+				"noGlobalObjectCalls": "warn",
+				"noInnerDeclarations": "warn",
+				"noInvalidConstructorSuper": "warn",
+				"noNewSymbol": "error",
+				"noSelfAssign": "warn",
+				"noSwitchDeclarations": "warn",
+				"noUndeclaredVariables": "error",
+				"noUnreachable": "warn",
+				"noUnreachableSuper": "warn",
+				"noUnusedLabels": "warn",
+				"noUnusedVariables": "error",
+				"useArrayLiterals": "warn",
+				"useExhaustiveDependencies": "off",
+				"useHookAtTopLevel": "error",
+				"useIsNan": "error"
+			},
+			"security": {
+				"noDangerouslySetInnerHtml": "off",
+				"noDangerouslySetInnerHtmlWithChildren": "error",
+				"noGlobalEval": "warn"
+			},
+			"style": {
+				"noArguments": "warn",
+				"noCommaOperator": "warn",
+				"noVar": "warn",
+				"useBlockStatements": "warn",
+				"useConst": "warn",
+				"useFragmentSyntax": "warn"
+			},
+			"suspicious": {
+				"noCatchAssign": "warn",
+				"noCompareNegZero": "warn",
+				"noControlCharactersInRegex": "off",
+				"noDebugger": "warn",
+				"noDoubleEquals": "warn",
+				"noDuplicateCase": "error",
+				"noDuplicateClassMembers": "error",
+				"noDuplicateJsxProps": "error",
+				"noDuplicateObjectKeys": "error",
+				"noDuplicateParameters": "error",
+				"noFallthroughSwitchClause": "warn",
+				"noFunctionAssign": "error",
+				"noGlobalAssign": "warn",
+				"noLabelVar": "warn",
+				"noRedeclare": "warn",
+				"noSelfCompare": "warn",
+				"noShadowRestrictedNames": "warn",
+				"noUnsafeNegation": "warn",
+				"useGetterReturn": "warn",
+				"useValidTypeof": "error"
+			}
+		},
+		"ignore": ["android/app/build", "**/dist", "**/coverage"]
+	},
+	"javascript": {
+		"formatter": {
+			"trailingCommas": "es5",
+			"jsxQuoteStyle": "double",
+			"quoteProperties": "asNeeded",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "asNeeded",
+			"bracketSpacing": true,
+			"bracketSameLine": false,
+			"quoteStyle": "double",
+			"attributePosition": "auto"
+		},
+		"globals": ["console", "__DEV__", "shared-node-browser"]
+	},
+	"overrides": [
+		{
+			"include": ["*.web.*"]
+		},
+		{
+			"include": ["*.d.ts"],
+			"linter": {
+				"rules": {}
+			}
+		},
+		{
+			"include": ["*.js", "*.jsx"]
+		},
+		{
+			"include": ["*.ts", "*.tsx"],
+			"linter": {
+				"rules": {
+					"complexity": {
+						"noBannedTypes": "error"
+					},
+					"correctness": {
+						"noUndeclaredVariables": "off"
+					},
+					"style": {
+						"useConsistentArrayType": {
+							"level": "warn",
+							"options": {
+								"syntax": "shorthand"
+							}
+						}
+					},
+					"suspicious": {
+						"noDuplicateClassMembers": "warn",
+						"noExtraNonNullAssertion": "warn",
+						"noRedeclare": "warn"
+					}
+				}
+			}
+		}
+	]
+}
